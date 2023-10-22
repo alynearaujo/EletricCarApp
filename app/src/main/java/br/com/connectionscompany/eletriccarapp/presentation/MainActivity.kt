@@ -1,5 +1,6 @@
 package br.com.connectionscompany.eletriccarapp.presentation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     fun setupListeners() {
         btnCalcular.setOnClickListener {
-            calcular()
+            //calcular()
+            startActivity(Intent(this, CalcularAutonomiaActivity::class.java))
         }
     }
 
