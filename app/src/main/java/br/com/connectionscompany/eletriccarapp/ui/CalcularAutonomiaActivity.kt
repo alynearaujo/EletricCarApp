@@ -1,6 +1,5 @@
-package br.com.connectionscompany.eletriccarapp.presentation
+package br.com.connectionscompany.eletriccarapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
