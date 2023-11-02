@@ -14,9 +14,6 @@ import br.com.connectionscompany.eletriccarapp.ui.adapter.TabAdapter
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var btnCalcular: Button
-    lateinit var listaCarros: RecyclerView
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager2
 
@@ -25,22 +22,13 @@ class MainActivity : AppCompatActivity() {
         Log.d("Lifecycle", "Create")
         setContentView(R.layout.activity_main)
         setupView()
-        setupListeners()
-        setupList()
+        
         setupTabs()
-
     }
 
     fun setupView() {
         tabLayout = findViewById(R.id.tab_layout)
-        btnCalcular = findViewById(R.id.btn_calcular)
-        listaCarros = findViewById(R.id.rv_lista_carros)
         viewPager = findViewById(R.id.vp_view_pager)
-    }
-
-    fun setupList() {
-        val adapter = CarAdapter(CarFactory.list)
-        listaCarros.adapter = adapter
     }
 
     fun setupTabs() {
@@ -70,10 +58,5 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    fun setupListeners() {
-        btnCalcular.setOnClickListener {
-            startActivity(Intent(this, CalcularAutonomiaActivity::class.java))
-        }
 
-    }
 }
